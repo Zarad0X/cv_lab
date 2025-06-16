@@ -22,7 +22,8 @@ for filename in os.listdir(input_dir):
 
 
         # Step 2: 查找轮廓
-        contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+        contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL,
+                                        cv2.CHAIN_APPROX_NONE)
 
         # Step 3: 在原图上绘制拟合椭圆
         output_image = image.copy()

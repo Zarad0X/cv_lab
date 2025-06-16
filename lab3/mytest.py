@@ -38,6 +38,7 @@ def align_face(image, eye_coords):
 def recognize(test_img_path, model_path):
     txt_path = os.path.splitext(test_img_path)[0] + ".txt"
     if not os.path.exists(txt_path):
+        print(test_img_path)
         print(" 缺少眼睛坐标文件:", txt_path)
         return
 
